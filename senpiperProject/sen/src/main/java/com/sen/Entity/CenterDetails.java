@@ -1,7 +1,6 @@
 package com.sen.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.sql.Timestamp;
 import java.util.List;
@@ -9,9 +8,11 @@ import java.util.List;
 @Entity
 public class CenterDetails {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer centerId ;
     private String centerName;
     private String centerCode;
+    @OneToOne(cascade = CascadeType.ALL)
     private  Address address;
     private  Integer studentCapacity;
     private List<String> coursesOffered ;

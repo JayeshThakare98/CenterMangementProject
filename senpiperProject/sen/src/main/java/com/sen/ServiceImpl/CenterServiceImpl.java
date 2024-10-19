@@ -5,10 +5,12 @@ import com.sen.Exception.ResourceNotFoundException;
 import com.sen.Service.CenterService;
 import com.sen.repositry.CenterRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class CenterServiceImpl implements CenterService {
 
     @Autowired

@@ -17,6 +17,10 @@ public class ApiResponse {
         super();
         // TODO Auto-generated constructor stub
     }
+
+    public ApiResponse(String userDeletedSuccessfully, boolean b) {
+    }
+
     public String getMessage() {
         return message;
     }
